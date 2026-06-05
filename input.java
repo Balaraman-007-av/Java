@@ -11,7 +11,7 @@ public class input {
         System.out.print("Enter your age: ");
         int age = sc.nextInt();
 
-        System.out.print("Enter your CGPA: ");
+        System.out.print("Enter your CGPA: "); 
         float cgpa = sc.nextFloat();
 
         System.out.println("Name: " + name);
