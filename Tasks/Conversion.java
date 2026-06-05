@@ -1,4 +1,3 @@
-package Tasks;
 /**
  * This program demonstrates widening type conversion
  * from int to long and long to float.

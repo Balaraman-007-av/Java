@@ -1,4 +1,3 @@
-package Tasks;
 import java.util.Scanner;
 
 public class CDN {
