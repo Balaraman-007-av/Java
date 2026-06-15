@@ -1,0 +1,102 @@
+public static void main(String[] args)
+public → Accessible by the JVM from outside the class.
+static → Can be called without creating an object of the class.
+void → Does not return any value.
+main → Special method name that the JVM looks for to start execution.
+String[] args → Stores command-line arguments passed to the program.
+
+Why is public used for the main class?
+public class Students {
+    public static void main(String[] args) {
+        // code
+    }
+}
+
+The JVM needs to access this class to start the program. Making it public ensures it is visible and accessible.
+Important Rule
+A Java file can have only one public top-level class, and the file name must exactly match that class name.
+public class Students { }
+must be saved as
+Students.java
+Otherwise, you'll get a compilation error.
+
+A static method belongs to the class itself, not to any object. So you can call it using the class name.
+
+Syntax
+ClassName.methodName();
+
+No. Java does not allocate memory only in the heap.
+
+The JVM mainly uses Stack and Heap memory.
+
+Stack Memory
+
+Stores:
+
+Local variables
+Method parameters
+References to objects
+Method call information (stack frames)
+
+Example:
+
+public static void main(String[] args) {
+    int x = 10;              // stack
+    Student s = new Student(); // reference 's' in stack
+}
+
+Here:
+
+x is in the stack.
+s (the reference) is in the stack.
+Heap Memory
+
+Stores:
+
+Objects created using new
+Instance variables inside those objects
+Student s = new Student();
+
+Memory:
+
+Stack                    Heap
+-----                    ----
+s  ------------------>  Student Object
+
+The actual Student object is in the heap.
+
+Example
+class Student {
+    int rollNo;
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 5;
+        Student s = new Student();
+    }
+}
+Stack                         Heap
+-----                         ----
+a = 5
+s --------->                 Student Object
+                               rollNo = 0
+Interview Answer
+
+Stack
+
+Local variables
+Method calls
+Object references
+
+Heap
+
+Objects
+Instance variables
+
+So when you write:
+
+Students_details[] obj = new Students_details[3];
+The array object itself is in the heap.
+The reference variable obj is in the stack (if it's a local variable in a method).
+Each element initially contains null references.
